@@ -1,4 +1,4 @@
-export const OWNER_NAME: string = `[OWNER NAME]`;
+export const OWNER_NAME: string = `DiSano`;
 export const OWNER_DESCRIPTION: string = `An organization dedicated to improving financial literacy for young adults.`;
 
 export const AI_NAME: string = `DollaSense`;
