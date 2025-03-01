@@ -7,15 +7,4 @@ export const WORD_BREAK_MESSAGE: string = `[WORD BREAK MESSAGE]`;
 export const HISTORY_CONTEXT_LENGTH: number = 7; // Number of messages to use for context when generating a response
 
 
-import ToneSelector from "@/components/ToneSelector";
-
-function ChatInterface() {
-    return (
-        <div>
-            <ToneSelector />
-            <ChatBox />
-        </div>
-    );
-}
-
-export default ChatInterface;
+ 
