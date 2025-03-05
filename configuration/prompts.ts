@@ -76,7 +76,11 @@ export function HYDE_PROMPT(chat: Chat) {
   const mostRecentMessages = chat.messages.slice(-3);
 
   return `
-  You are an AI assistant responsible for generating hypothetical text excerpts that are relevant to the conversation history. You're given the conversation history. Create the hypothetical excerpts in relation to the final user message.
+  You are an AI assistant responsible for generating hypothetical text excerpts that are relevant to the conversation history. You must ensure that these excerpts focus on **real-life financial challenges faced by underserved communities**. Keep responses **practical, relatable, and easy to understand**. 
+  For example:
+  - If discussing saving money, suggest **simple, achievable saving strategies**.
+  - If discussing loans, **explain risks in a straightforward way**.
+  Now generate a relevant example for the user:
 
   Conversation history:
   ${mostRecentMessages
