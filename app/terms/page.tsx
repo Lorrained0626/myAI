@@ -26,9 +26,9 @@ export default function Terms() {
           </li>
           <li className="text-gray-700">
             <span className="font-semibold">Educational Purposes Only:</span> 
-            The Chatbot is designed to provide **general financial literacy and 
-            educational content**. It does not offer **personalized financial advice**, 
-            investment strategies, tax recommendations, or legal guidance. **Decisions 
+             The Chatbot is designed to provide general financial literacy and 
+            educational content. It does not offer personalized financial advice, 
+            investment strategies, tax recommendations, or legal guidance. Decisions 
             based on information provided by the Chatbot are made at your own risk.**
           </li>
            <li className="text-gray-700">
@@ -38,7 +38,7 @@ export default function Terms() {
             guarantees about the accuracy, completeness, or timeliness of any 
             financial information provided. **Users should independently verify 
             information and consult a qualified financial professional before making 
-            financial decisions.**
+            financial decisions.
           </li>
           <li className="text-gray-700">
             <span className="font-semibold">
