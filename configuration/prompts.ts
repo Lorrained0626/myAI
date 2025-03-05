@@ -23,7 +23,7 @@ export function RESPOND_TO_RANDOM_MESSAGE_SYSTEM_PROMPT() {
   return `
 ${IDENTITY_STATEMENT} ${OWNER_STATEMENT} ${OWNER_DESCRIPTION} ${AI_ROLE} 
 
-Respond with the following tone: ${AI_TONE}
+Respond with the following tone: ${AI_TONE} Use clear, simple language** and ensure that every response is easy for someone with no financial background to understand. If explaining a financial term, provide a short definition and an example.
   `;
 }
 
