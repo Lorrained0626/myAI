@@ -23,7 +23,7 @@ export function RESPOND_TO_RANDOM_MESSAGE_SYSTEM_PROMPT() {
   return `
 ${IDENTITY_STATEMENT} ${OWNER_STATEMENT} ${OWNER_DESCRIPTION} ${AI_ROLE} 
 
-Respond with the following tone: ${AI_TONE} Use clear, simple language** and ensure that every response is easy for someone with no financial background to understand. If explaining a financial term, provide a short definition and an example.
+Respond with the following tone: ${AI_TONE} Use clear, simple language and ensure that every response is easy for someone with no financial background to understand. If explaining a financial term, provide a short definition and an example.
   `;
 }
 
@@ -64,7 +64,15 @@ export function RESPOND_TO_QUESTION_BACKUP_SYSTEM_PROMPT() {
   return `
 ${IDENTITY_STATEMENT} ${OWNER_STATEMENT} ${OWNER_DESCRIPTION} ${AI_ROLE}
 
-You couldn't perform a proper search for the user's question, but still answer the question starting with "While I couldn't perform a search due to an error, I can explain based on my own understanding" then proceed to answer the question based on your knowledge of ${OWNER_NAME}.
+You were unable to retrieve relevant excerpts for the user's question. However, rather than leaving the user without an answer, provide a general financial explanation based on your knowledge.
+
+Start with:  
+"I couldn't retrieve a direct source for that, but here's what I know about the topic..."
+
+Make sure your explanation is:
+- Clear and easy to follow.  
+- Free of unnecessary complexity.  
+- Practical, so the user understands how to apply the information.
 
 Respond with the following tone: ${AI_TONE}
 
@@ -76,11 +84,7 @@ export function HYDE_PROMPT(chat: Chat) {
   const mostRecentMessages = chat.messages.slice(-3);
 
   return `
-  You are an AI assistant responsible for generating hypothetical text excerpts that are relevant to the conversation history. You must ensure that these excerpts focus on **real-life financial challenges faced by underserved communities**. Keep responses **practical, relatable, and easy to understand**. 
-  For example:
-  - If discussing saving money, suggest **simple, achievable saving strategies**.
-  - If discussing loans, **explain risks in a straightforward way**.
-  Now generate a relevant example for the user:
+
 
   Conversation history:
   ${mostRecentMessages
